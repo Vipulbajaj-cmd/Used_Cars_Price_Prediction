@@ -1,0 +1,141 @@
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand" />
+    <style>
+        p {
+            font-family: Quicksand;
+            font-weight: bolder;
+            font-size: 1.5rem;
+        }
+
+        a {
+            font-family: Quicksand;
+            font-size: 20px;
+            margin: 5 60 5 60;
+            width: 40%;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    {% block content %}
+    <center><u style="color: whitesmoke;">
+            <h1 style="font-family: Quicksand; color: #0984aa;"><b>Second Car Prize Prediction</b></h1>
+        </u></center>
+    </center>
+    <hr>
+    <div class="row">
+
+        <div class="col-sm-4">
+            <center><a href="{% url 'SecondCarApp:available-cars' %}" class="btn btn-info">Used Car Segment</a></center>
+        </div>
+        <div class="col-sm-4">
+            <center><a href="{% url 'SecondCarApp:analysis' %}"><img
+                        src="https://media.istockphoto.com/photos/car-icon-cyan-blue-glossy-round-button-picture-id613335294?k=6&m=613335294&s=170667a&w=0&h=RsgXcPqYXXtI5r6wCLnekw1mIa5vX4b-2UWfvleQC24="
+                        style="border-radius: 50%; height: 200; width: 200;" alt="logo" /></a><br><b
+                    style="color: #0984aa;">Click for Analysis!!</b></center>
+        </div>
+        <div class="col-sm-4">
+            <center><a href="{% url 'SecondCarApp:gallery' %}" class="btn btn-info">Gallery</a></center>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 m-5">
+            <u style="color: whitesmoke;">
+                <h2 style="font-family: Quicksand; color: #0984aa; padding: 2%;"><b>About Second Car</b></h2>
+            </u>
+            <div class="card m-4" style="width: 90%; background-color: #5bc0de;">
+                <div style="font-family: Quicksand; font-size: large; padding: 5%;">
+                    <b>SecondCar is India's leading car search venture that helps users buy cars that are right for
+                        them. Its website and app carry rich automotive content such as expert reviews, detailed specs
+                        and prices, comparisons as well as videos and pictures of all car brands and models available in
+                        India. The company has tie-ups with many auto manufacturers, more than 4000 car dealers and
+                        numerous financial institutions to facilitate the purchase of vehicles.
+                        <br><br>SecondCar is facing issue in its used car segment. SecondCar’s board of director has
+                        raised issue of customer dis-satisfaction with the car prices. Upon investigation, board has
+                        found discrepancies in car prices. Prices when compared with competitors are higher by 10 – 15%.
+                        Detailed review of pricing method has revealed few issues in manual vehicle inspection and
+                        pricing. A bunch of vehicle pricing managers are purchasing cars from their friends at inflated
+                        prices. And hence final prices have soured.
+                        <br><br>Board have decided to develop a machine learning algorithm to predict the selling prices
+                        of car based on historical values. As a data scientist, please suggest the best suited method
+                        and model to the board.
+                    </b>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-12 m-5">
+            <u style="color: whitesmoke;">
+                <h2 style="font-family: Quicksand; color: #0984aa; padding: 2%;"><b>Contact Us</b></h2>
+            </u>
+            <div class="card m-4" style="width: 90%; background-color: #5bc0de;">
+                <div class="row">
+                    <div class="col">
+                        <div style="font-family: Quicksand; font-size: medium; padding: 5%;">
+                            <b>
+                                <h4>Kasim Sache</h4>
+                            </b><br>
+                            <b>Contact: 9113111234<br>
+                                Email: itskasimsache@gmail.com</b>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div style="font-family: Quicksand; font-size: medium; padding: 5%;">
+                            <b>
+                                <h4>Sneha Kashid</h4>
+                            </b><br>
+                            <b>Contact: 7447615204<br>
+                                Email: snehakashid1999@gmail.com</b>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div style="font-family: Quicksand; font-size: medium; padding: 5%;">
+                            <b>
+                                <h4>Vipul Bajaj</h4>
+                            </b><br>
+                            <b>Contact: 9131122870<br>
+                                Email: vipulbajaj77@gmail.com</b>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+</body>
+
+</html>

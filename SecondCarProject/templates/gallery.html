@@ -1,0 +1,127 @@
+{% extends 'home.html' %}
+{% block content %}
+<head>
+    <style>
+        li {
+            color: #46bfe4
+        }
+    </style>
+</head>
+<center><h1 style="font-family: Quicksand; color: #5bc0de;">Gallery</h1></center>
+<hr />
+<center>
+<div class="row">
+    <div class="col"><a href="{% url 'SecondCarApp:home' %}" class="btn btn-info">Home</a></div>
+</div>
+<div class="row m-2">
+    <div class="col"> 
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="11"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="12"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="13"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="14"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="15"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="16"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="17"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h3 style="font-family: Quicksand; color: whitesmoke;">{{0.name}}</h3>
+            <img class="d-block w-50" src="{{0.link}}" alt="First slide" height="500" width="500">
+          </div>
+          <div class="carousel-item">
+            <h3 style="font-family: Quicksand; color: whitesmoke;">{{1.name}}</h3>
+            <img class="d-block w-50" src="{{1.link}}" alt="First slide" height="500" width="500">
+          </div>
+          <div class="carousel-item">
+            <h3 style="font-family: Quicksand; color: whitesmoke;">{{2.name}}</h3>
+            <img class="d-block w-50" src="{{2.link}}" alt="First slide" height="500" width="500">
+          </div>
+          <div class="carousel-item">
+            <h3 style="font-family: Quicksand; color: whitesmoke;">{{3.name}}</h3>
+            <img class="d-block w-50" src="{{3.link}}" alt="First slide" height="500" width="500">
+          </div>
+          <div class="carousel-item">
+            <h3 style="font-family: Quicksand; color: whitesmoke;">{{4.name}}</h3>
+            <img class="d-block w-50" src="{{4.link}}" alt="First slide" height="500" width="500">
+          </div>
+          <div class="carousel-item">
+            <h3 style="font-family: Quicksand; color: whitesmoke;">{{5.name}}</h3>
+            <img class="d-block w-50" src="{{5.link}}" alt="First slide" height="500" width="500">
+          </div>
+          <div class="carousel-item">
+            <h3 style="font-family: Quicksand; color: whitesmoke;">{{6.name}}</h3>
+            <img class="d-block w-50" src="{{6.link}}" alt="First slide" height="500" width="500">
+          </div>
+          <div class="carousel-item">
+            <h3 style="font-family: Quicksand; color: whitesmoke;">{{7.name}}</h3>
+            <img class="d-block w-50" src="{{7.link}}" alt="First slide" height="500" width="500">
+          </div>
+          <div class="carousel-item">
+            <h3 style="font-family: Quicksand; color: whitesmoke;">{{8.name}}</h3>
+            <img class="d-block w-50" src="{{8.link}}" alt="First slide" height="500" width="500">
+          </div>
+          <div class="carousel-item">
+            <h3 style="font-family: Quicksand; color: whitesmoke;">{{9.name}}</h3>
+            <img class="d-block w-50" src="{{9.link}}" alt="First slide" height="500" width="500">
+          </div>
+          <div class="carousel-item">
+            <h3 style="font-family: Quicksand; color: whitesmoke;">{{10.name}}</h3>
+            <img class="d-block w-50" src="{{10.link}}" alt="First slide" height="500" width="500">
+          </div>
+          <div class="carousel-item">
+            <h3 style="font-family: Quicksand; color: whitesmoke;">{{11.name}}</h3>
+            <img class="d-block w-50" src="{{11.link}}" alt="First slide" height="500" width="500">
+          </div>
+          <div class="carousel-item">
+            <h3 style="font-family: Quicksand; color: whitesmoke;">{{12.name}}</h3>
+            <img class="d-block w-50" src="{{12.link}}" alt="First slide" height="500" width="500">
+          </div>
+          <div class="carousel-item">
+            <h3 style="font-family: Quicksand; color: whitesmoke;">{{13.name}}</h3>
+            <img class="d-block w-50" src="{{13.link}}" alt="First slide" height="500" width="500">
+          </div>
+          <div class="carousel-item">
+            <h3 style="font-family: Quicksand; color: whitesmoke;">{{14.name}}</h3>
+            <img class="d-block w-50" src="{{14.link}}" alt="First slide" height="500" width="500">
+          </div>
+          <div class="carousel-item">
+            <h3 style="font-family: Quicksand; color: whitesmoke;">{{15.name}}</h3>
+            <img class="d-block w-50" src="{{15.link}}" alt="First slide" height="500" width="500">
+          </div>
+          <div class="carousel-item">
+            <h3 style="font-family: Quicksand; color: whitesmoke;">{{16.name}}</h3>
+            <img class="d-block w-50" src="{{16.link}}" alt="First slide" height="500" width="500">
+          </div>
+          <div class="carousel-item">
+            <h3 style="font-family: Quicksand; color: whitesmoke;">{{17.name}}</h3>
+            <img class="d-block w-50" src="{{17.link}}" alt="First slide" height="500" width="500">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+</div>
+</center>
+<hr>
+
+{% endblock %}

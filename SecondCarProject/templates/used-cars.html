@@ -1,0 +1,215 @@
+{% extends 'home.html' %}
+{% block content %}
+<center>
+  <h1 style="font-family: Quicksand; color: #5bc0de;">Cars to Buy</h1>
+</center>
+<hr />
+<center>
+  <div class="row">
+    <div class="col-sm-4"><a href="{% url 'SecondCarApp:home' %}" class="btn btn-info">Home</a></div>
+    {% if not model_details_flag %}
+    <div class="col-sm-4"><a href="{% url 'SecondCarApp:model-details' %}" class="btn btn-info">Model Used</a></div>
+    {% else %}
+    <div class="col-sm-4"
+      style="font-family: Quicksand; color: #0984aa; padding: 2%; font-size: x-large; font-weight: 600;"><a href="{% url 'SecondCarApp:back-to-model-btn' %}">RANDOM FOREST
+      REGRESSOR</a></div>
+    {% endif %}
+    {% if not accuracy %}
+    <div class="col-sm-4"><a href="{% url 'SecondCarApp:accuracy' %}" class="btn btn-info">Model's Accuracy</a></div>
+    {% else %}
+    <div class="col-sm-4"
+      style="font-family: Quicksand; color: #0984aa; padding: 2%; font-size: x-large; font-weight: 600;"><a href="{% url 'SecondCarApp:back-to-accuracy-btn' %}">{{accuracy}} %</a>
+    </div>
+    {% endif %}
+  </div>
+</center>
+<hr>
+<center>
+  <div class="container">
+    <div class="row">
+      <div class="card m-4" style="width: 20rem; height: 23rem;">
+        <img class="card-img-top"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKqu1Pa5_BwAVuENd-2_DQzcEUGv_zba9aoA&usqp=CAU"
+          height="250px" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text"><b>{{0.name}}</b></p>
+          <a href="{% url 'SecondCarApp:show-more' 0 %}" class="btn btn-info">Show More</a>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 20rem; height: 23rem;">
+        <img class="card-img-top"
+          src="https://www.motoroids.com/wp-content/uploads/2018/01/2018-Maruti-Suzuki-Swift-India-Booking-4.jpg"
+          height="250px" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text"><b>{{1.name}}</b></p>
+          <a href="{% url 'SecondCarApp:show-more' 1 %}" class="btn btn-info">Show More</a>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 20rem; height: 23rem;">
+        <img class="card-img-top" src="https://stat.overdrive.in/wp-content/uploads/2013/05/Toyota-Etios.jpg"
+          height="250px" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text"><b>{{2.name}}</b></p>
+          <a href="{% url 'SecondCarApp:show-more' 2 %}" class="btn btn-info">Show More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="card m-4" style="width: 20rem; height: 23rem;">
+        <img class="card-img-top" src="https://th.bing.com/th/id/OIP.6Ui0d8VVEcwwbHLN2wv6xwHaE2?pid=Api&rs=1"
+          height="250px" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text"><b>{{3.name}}</b></p>
+          <a href="{% url 'SecondCarApp:show-more' 3 %}" class="btn btn-info">Show More</a>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 20rem; height: 23rem;">
+        <img class="card-img-top" src="https://th.bing.com/th/id/OIP.NQYPHAdRxUwm8kANvLx_qQHaEl?pid=Api&rs=1"
+          height="250px" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text"><b>{{4.name}}</b></p>
+          <a href="{% url 'SecondCarApp:show-more' 4 %}" class="btn btn-info">Show More</a>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 20rem; height: 23rem;">
+        <img class="card-img-top"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRILew6KBPBHI1_ibndrOFq_5zXcIEPJ0uzpA&usqp=CAU"
+          height="250px" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text"><b>{{5.name}}</b></p>
+          <a href="{% url 'SecondCarApp:show-more' 5 %}" class="btn btn-info">Show More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="card m-4" style="width: 20rem; height: 23rem;">
+        <img class="card-img-top" src="https://cdni.autocarindia.com/ExtraImages/20190408115805_INNOVA1.png"
+          height="250px" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text"><b>{{6.name}}</b></p>
+          <a href="{% url 'SecondCarApp:show-more' 6 %}" class="btn btn-info">Show More</a>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 20rem; height: 23rem;">
+        <img class="card-img-top" src="https://th.bing.com/th/id/OIP.Hwh2EJJvAtUaJoG5P9pFnwHaFj?pid=Api&rs=1"
+          height="250px" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text"><b>{{7.name}}</b></p>
+          <a href="{% url 'SecondCarApp:show-more' 7 %}" class="btn btn-info">Show More</a>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 20rem; height: 23rem;">
+        <img class="card-img-top"
+          src="https://th.bing.com/th/id/R4d87d63503fbb659c357000f545d17c7?rik=YaJmcI%2bJ5brjzw&riu=http%3a%2f%2f1.bp.blogspot.com%2f-VTW6y00EHe0%2fUkv-P7ymr6I%2fAAAAAAAAa8I%2fTp7WlK5TzCw%2fs1600%2fSkoda-Octavia_RS_2014_20.jpg&ehk=rAl2yIfPMbxI9ojQ4WeSaxFsKozZ7nvpj3Bw%2fIXp76A%3d&risl=&pid=ImgRaw"
+          height="250px" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text"><b>{{8.name}}</b></p>
+          <a href="{% url 'SecondCarApp:show-more' 8 %}" class="btn btn-info">Show More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="card m-4" style="width: 20rem; height: 23rem;">
+        <img class="card-img-top"
+          src="https://di-uploads-pod2.dealerinspire.com/riverviewford2/uploads/2017/03/2017-Ford-Explorer-Ruby-Red.png"
+          height="250px" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text"><b>{{9.name}}</b></p>
+          <a href="{% url 'SecondCarApp:show-more' 9 %}" class="btn btn-info">Show More</a>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 20rem; height: 23rem;">
+        <img class="card-img-top"
+          src="https://st.motortrend.com/uploads/sites/10/2015/11/2014-audi-q5-suv-angular-front.png" height="250px"
+          alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text"><b>{{10.name}}</b></p>
+          <a href="{% url 'SecondCarApp:show-more' 10 %}" class="btn btn-info">Show More</a>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 20rem; height: 23rem;">
+        <img class="card-img-top"
+          src="https://s.aolcdn.com/dims-global/dims3/GLOB/legacy_thumbnail/788x525/quality/85/https://s.aolcdn.com/commerce/autodata/images/USC30MBCA61A021001.jpg"
+          height="250px" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text"><b>{{11.name}}</b></p>
+          <a href="{% url 'SecondCarApp:show-more' 11 %}" class="btn btn-info">Show More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="card m-4" style="width: 20rem; height: 23rem;">
+        <img class="card-img-top"
+          src="https://th.bing.com/th/id/OIP.6klvVKR_Q_nEj2wWBUZcbAHaE4?pid=Api&w=2100&h=1386&rs=1" height="250px"
+          alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text"><b>{{12.name}}</b></p>
+          <a href="{% url 'SecondCarApp:show-more' 12 %}" class="btn btn-info">Show More</a>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 20rem; height: 23rem;">
+        <img class="card-img-top"
+          src="https://assets.newcars.com/images/car-pictures/original/2020-Audi-A5-Coupe-Hatchback-2.0T-Premium-2dr-All-wheel-Drive-quattro-Coupe-Photo-4.png"
+          height="250px" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text"><b>{{13.name}}</b></p>
+          <a href="{% url 'SecondCarApp:show-more' 13 %}" class="btn btn-info">Show More</a>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 20rem; height: 23rem;">
+        <img class="card-img-top"
+          src="https://assets.newcars.com/images/car-pictures/original/2019-BMW-X5-SUV-xDrive40i-4dr-All-wheel-Drive-Sports-Activity-Vehicle-Photo-14.png"
+          height="250px" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text"><b>{{14.name}}</b></p>
+          <a href="{% url 'SecondCarApp:show-more' 14 %}" class="btn btn-info">Show More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="card m-4" style="width: 20rem; height: 23rem;">
+        <img class="card-img-top" src="https://th.bing.com/th/id/OIP.cv-Thmm8oEfEmh1OFKHNaQHaE6?pid=Api&rs=1"
+          height="250px" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text"><b>{{15.name}}</b></p>
+          <a href="{% url 'SecondCarApp:show-more' 15 %}" class="btn btn-info">Show More</a>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 20rem; height: 23rem;">
+        <img class="card-img-top" src="https://www.allvehiclecontracts.co.uk/Images/183788/600.jpg" height="250px"
+          alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text"><b>{{16.name}}</b></p>
+          <a href="{% url 'SecondCarApp:show-more' 16 %}" class="btn btn-info">Show More</a>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 20rem; height: 23rem;">
+        <img class="card-img-top"
+          src="https://icdn3.digitaltrends.com/image/2016-audi-rs7-performance-product-1200x630-c-ar1.91.jpg?ver=1"
+          height="250px" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text"><b>{{17.name}}</b></p>
+          <a href="{% url 'SecondCarApp:show-more' 17 %}" class="btn btn-info">Show More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</center>
+{% endblock %}

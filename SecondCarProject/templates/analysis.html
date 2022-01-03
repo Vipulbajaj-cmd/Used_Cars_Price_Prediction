@@ -1,0 +1,347 @@
+{% extends 'home.html' %}
+{% block content %}
+{% load static %}
+<div class="row" style="margin-top: 20px;">
+    <div class="col-sm-3">
+        <a href="{% url 'SecondCarApp:home' %}" class="btn btn-info">Back</a>
+    </div>
+    <div class="col-sm-3">
+        <a href="{% url 'SecondCarApp:bar-graph-1' %}" class="btn btn-info">Graph-1</a>
+    </div>
+    <div class="col-sm-3">
+        <a href="{% url 'SecondCarApp:bar-graph-2' %}" class="btn btn-info">Graph-2</a>
+    </div>
+    <div class="col-sm-3">
+        <a href="{% url 'SecondCarApp:pie-graph-1' %}" class="btn btn-info">Graph-3</a>
+    </div>
+</div>
+{% if bar1_flag %}
+<div class=row>
+    <div class="col-sm-6">
+        <center><img src="{% static 'images/bar1.png' %}" style="background-color: white;margin-top: 20px;"
+                alt="image alternate" height="700" width="700"></center>
+    </div>
+    <div class="col-sm-2" style="background-color: white;margin-top: 20px;margin-left: 250px;height: 700;width:100;">
+        <table>
+            <tr>
+                <th>Number</th>
+                <th>Company</th>
+                <th>Count</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>Ambassador</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Audi</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>BMW</td>
+                <td>39</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Chevrolet</td>
+                <td>188</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Daewoo</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Datsun</td>
+                <td>37</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Fiat</td>
+                <td>37</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Force</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Ford</td>
+                <td>238</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Honda</td>
+                <td>252</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Hyundai</td>
+                <td>821</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Isuzu</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Jaguar</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Jeep</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>Kia</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>Land</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>MG</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>Mahindra</td>
+                <td>365</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>Maruti</td>
+                <td>1280</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>Mercedes</td>
+                <td>35</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>Mitsubishi</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>Nissan</td>
+                <td>64</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>OpelCorsa</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>Renault</td>
+                <td>146</td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td>Skoda</td>
+                <td>68</td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>Tata</td>
+                <td>361</td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td>Toyota</td>
+                <td>206</td>
+            </tr>
+            <tr>
+                <td>27</td>
+                <td>Volkswagen</td>
+                <td>107</td>
+            </tr>
+            <tr>
+                <td>28</td>
+                <td>Volvo</td>
+                <td>4</td>
+            </tr>
+        </table>
+    </div>
+</div>
+{% endif %}
+{% if bar2_flag %}
+<div class="row">
+    <div class="col-sm-6">
+        <center><img src="{% static 'images/bar2.png' %}" style="background-color: white;margin-top: 20px;"
+                alt="image alternate" height="700" width="700"></center>
+    </div>
+    <div class="col-sm-2"
+        style="background-color: white;margin-top: 20px;margin-left: 250px;height: 700;width:100;">
+        <table>
+            <tr>
+                <th>Year</th>
+                <th>Count</th>
+            </tr>
+            <tr>
+                <td>1992</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1995</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1996</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>1997</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>1998</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>1999</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>2000</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>2001</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>2002</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>2003</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>2004</td>
+                <td>42</td>
+            </tr>
+            <tr>
+                <td>2005</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td>2006</td>
+                <td>110</td>
+            </tr>
+            <tr>
+                <td>2007</td>
+                <td>134</td>
+            </tr>
+            <tr>
+                <td>2008</td>
+                <td>145</td>
+            </tr>
+            <tr>
+                <td>2009</td>
+                <td>193</td>
+            </tr>
+            <tr>
+                <td>2010</td>
+                <td>234</td>
+            </tr>
+            <tr>
+                <td>2011</td>
+                <td>271</td>
+            </tr>
+            <tr>
+                <td>2012</td>
+                <td>415</td>
+            </tr>
+            <tr>
+                <td>2013</td>
+                <td>386</td>
+            </tr>
+            <tr>
+                <td>2014</td>
+                <td>367</td>
+            </tr>
+            <tr>
+                <td>2015</td>
+                <td>421</td>
+            </tr>
+            <tr>
+                <td>2016</td>
+                <td>357</td>
+            </tr>
+            <tr>
+                <td>2017</td>
+                <td>466</td>
+            </tr>
+            <tr>
+                <td>2018</td>
+                <td>366</td>
+            </tr>
+            <tr>
+                <td>2019</td>
+                <td>195</td>
+            </tr>
+            <tr>
+                <td>2020</td>
+                <td>48</td>
+            </tr>
+        </table>
+    </div>
+</div>
+{% endif %}
+{% if pie1_flag %}
+<div class="row">
+    <div class="col-sm-6">
+        <center><img src="{% static 'images/pie1.png' %}" style="background-color: white;margin-top: 20px;"
+                alt="image alternate" height="700" width="700"></center>
+    </div>
+    <div class="col-sm-2" style="background-color: white;margin-top: 250px;margin-left: 250px;height: 200;width:100;">
+        <table title="Information about Graph">
+            <tr>
+                <th>Numbers</th>
+                <th>Type of Fuel</th>
+                <th>Percentage</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>CNG</td>
+                <td>0.92%</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Diesel</td>
+                <td>49.65%</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Electric</td>
+                <td>0.02%</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>LPG</td>
+                <td>0.53%</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Petrol</td>
+                <td>48.87%</td>
+            </tr>
+        </table>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
